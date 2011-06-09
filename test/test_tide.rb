@@ -6,8 +6,8 @@ class TideTest < Test::Unit::TestCase
   # TODO fake web requests
 
   def test_location
-    @tide = Tide.new(:station => 610)
-    assert_match "Sydney", @tide.location
+    @tide = Tide.new(:station => 9)
+    assert_match "Garnet Point", @tide.location
   end
 
   def test_to_csv
