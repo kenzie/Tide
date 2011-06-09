@@ -1,0 +1,48 @@
+= Tide
+
+Tide class fetches returns Canadian tide prediction data from waterlevels.gc.ca
+
+Accepts options for tide zone, tide region, tide station, date and timezone. Defaults to 7 days of tide prediction data (starting from today) for Sydney, Nova Scotia in Atlantic time.
+
+Outputs a semi-colon delimited array of tides (date, time, height in meters) with Tide.new.to_csv or a formatted html table with Tide.new.to_html.
+
+== Example Output
+
+===Tide.new.to_csv
+
+	2010-02-11,00:47,0.3
+	2010-02-11,07:17,0.9
+	2010-02-11,12:23,0.6
+	...
+
+===Tide.new.to_html
+
+	<table summary="Tide tables for Sydney with columns for time of day and tide height (in meters).">
+		<thead>
+			<tr><th scope="col">Time</th><th scope="col">Height</th></tr>
+		</thead>
+		<tbody>
+			<tr><th scope="rowgroup" colspan="2">2010-02-11</th></tr>
+			<tr><td>00:47</td><td>0.3m</td></tr>
+			<tr><td>07:17</td><td>0.9m</td></tr>
+			<tr><td>12:23</td><td>0.6m</td></tr>
+			<tr><td>18:47</td><td>1.1m</td></tr>
+		</tbody>
+		...
+	</table>
+
+== Contributing to tide
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Kenzie Campbell. See LICENSE.txt for
+further details.
+
