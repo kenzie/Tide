@@ -31,13 +31,14 @@ Gem::Specification.new do |s|
     "lib/.gitignore",
     "lib/tide.rb",
     "test/helper.rb",
-    "test/test_tide.rb"
+    "test/test_tide.rb",
+    "tide.gemspec"
   ]
   s.homepage = %q{http://github.com/kenzie/tide}
   s.licenses = [%q{MIT}]
   s.require_paths = [%q{lib}]
   s.rubygems_version = %q{1.8.5}
-  s.summary = %q{Tide class fetches returns Canadian tide prediction data from waterlevels.gc.cam}
+  s.summary = %q{Tide class fetches returns Canadian tide prediction data from waterlevels.gc.ca}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
