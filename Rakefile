@@ -17,12 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "tide"
   gem.homepage = "http://github.com/kenzie/tide"
   gem.license = "MIT"
-  gem.summary = %Q{Tide class fetches returns Canadian tide prediction data from waterlevels.gc.ca}
-  gem.description = %Q{Tide class fetches returns Canadian tide prediction data from waterlevels.gc.ca
-
-  Accepts options for tide zone, tide region, tide station, date and timezone. Defaults to 7 days of tide prediction data (starting from today) for Sydney, Nova Scotia in Atlantic time.
-
-  Outputs a semi-colon delimited array of tides (date, time, height in meters) with Tide.new.to_csv or a formatted html table with Tide.new.to_html.}
+  gem.summary = %Q{Tide class fetches and returns Canadian tide prediction data from waterlevels.gc.ca}
+  gem.description = %Q{Tide class fetches and returns Canadian tide prediction data from waterlevels.gc.ca. Accepts options for tide zone, tide region, tide station, date and timezone. Defaults to 7 days of tide prediction data (starting from today) for Sydney, Nova Scotia in Atlantic time. Outputs a semi-colon delimited array of tides (date, time, height in meters) with Tide.new.to_csv or a formatted html table with Tide.new.to_html.}
   gem.email = "kenzie@route19.com"
   gem.authors = ["Kenzie Campbell"]
   # dependencies defined in Gemfile
