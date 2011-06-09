@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Kenzie Campbell}]
   s.date = %q{2011-06-09}
-  s.description = %q{Tide class fetches and returns Canadian tide prediction data from waterlevels.gc.ca. Accepts options for tide zone, tide region, tide station, date and timezone. Defaults to 7 days of tide prediction data (starting from today) for Sydney, Nova Scotia in Atlantic time. Outputs a semi-colon delimited array of tides (date, time, height in meters) with Tide.new.to_csv or a formatted html table with Tide.new.to_html.}
+  s.description = %q{Tide class fetches and returns Canadian tide prediction data from waterlevels.gc.ca. Accepts options for tide zone, tide region, tide station, date and timezone. Defaults to 7 days of tide prediction data (starting from today) for Sydney, Nova Scotia in Atlantic time. Outputs a comma separated list of tides (date, time, height in meters) with Tide.new.to_csv or a formatted html table with Tide.new.to_html.}
   s.email = %q{kenzie@route19.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
