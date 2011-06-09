@@ -6,7 +6,7 @@ class Tide
 
   POST_URL      = 'http://www.waterlevels.gc.ca/cgi-bin/tide-shc.cgi'
   TIDE_REGEX    = /#\sDate;Time;Height<br>(.*)<br><\/p><\/td>/
-  STATION_REGEX = /# Station : (.*) \(\d+\).*/
+  STATION_REGEX = /#\sStation\s:\s(.*)\s\(\d+\).*/
   INIT_DEFAULTS = { :zone => 27, :region => 5, :station => 610, :timezone => 'AST', :date => Time.now }
 
   attr_reader :location
