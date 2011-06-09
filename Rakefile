@@ -17,7 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "tide"
   gem.homepage = "http://github.com/kenzie/tide"
   gem.license = "MIT"
-  gem.summary = %Q{Tide class fetches returns Canadian tide prediction data from waterlevels.gc.cam}
+  gem.summary = %Q{Tide class fetches returns Canadian tide prediction data from waterlevels.gc.ca}
   gem.description = %Q{Tide class fetches returns Canadian tide prediction data from waterlevels.gc.ca
 
   Accepts options for tide zone, tide region, tide station, date and timezone. Defaults to 7 days of tide prediction data (starting from today) for Sydney, Nova Scotia in Atlantic time.
