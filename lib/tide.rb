@@ -22,7 +22,7 @@ class Tide
     @location   = data.match(STATION_REGEX)[1]
   end
 
-  # Downlaod raw data
+  # Download raw data
   def data
     @data ||= download_tide_data
   end
