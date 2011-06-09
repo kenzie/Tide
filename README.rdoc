@@ -1,6 +1,6 @@
 = Tide
 
-Tide class fetches returns Canadian tide prediction data from waterlevels.gc.ca
+Tide class fetches and returns Canadian tide prediction data from waterlevels.gc.ca
 
 Accepts options for tide zone, tide region, tide station, date and timezone. Defaults to 7 days of tide prediction data (starting from today) for Sydney, Nova Scotia in Atlantic time.
 
