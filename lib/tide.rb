@@ -20,6 +20,11 @@ class Tide
     @location   = data.match(STATION_REGEX)[1]
   end
 
+  # Shortcut for station lookup
+  def self.station(sid)
+    new(:station => sid)
+  end
+
   # Download raw data
   def data
     @data ||= download_tide_data

@@ -36,4 +36,9 @@ class TideTest < Test::Unit::TestCase
     assert_not_equal tide_ast.to_csv, tide_est.to_csv
   end
 
+  def test_station_shortcut
+    @tide = Tide.station(9)
+    assert_match "Garnet Point", @tide.location
+  end
+
 end
