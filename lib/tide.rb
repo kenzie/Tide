@@ -7,13 +7,12 @@ class Tide
   POST_URL      = 'http://www.waterlevels.gc.ca/cgi-bin/tide-shc.cgi'
   TIDE_REGEX    = /#\sDate;Time;Height<br>(.*)<br><\/p><\/td>/
   STATION_REGEX = /#\sStation\s:\s(.*)\s\(\d+\).*/
-  INIT_DEFAULTS = { :station => 610, :timezone => 'AST', :date => Time.now }
 
   attr_reader :location
 
   # Create new tide table.
   def initialize(options = {})
-    options     = INIT_DEFAULTS.merge(options)
+    options     = { :station => 610, :timezone => 'AST', :date => Time.now }.merge(options)
     @station    = options[:station]
     @timezone   = options[:timezone]
     @date       = options[:date]
