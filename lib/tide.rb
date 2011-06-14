@@ -8,15 +8,12 @@ class Tide
   TIDE_REGEX    = /#\sDate;Time;Height<br>(.*)<br><\/p><\/td>/
   STATION_REGEX = /#\sStation\s:\s(.*)\s\(\d+\).*/
 
-  attr_reader :location
-
   # Create new tide table.
   def initialize(options = {})
     options     = { :station => 610, :timezone => 'AST', :date => Time.now }.merge(options)
     @station    = options[:station]
     @timezone   = options[:timezone]
     @date       = options[:date]
-    @location   = data.match(STATION_REGEX)[1]
   end
 
   # Shortcut for station lookup
@@ -67,7 +64,7 @@ private
 
   # Formats tide data as html table.
   def format_html
-    formatted = "<table summary=\"Tide tables for #{location} with columns for time of day and tide height (in meters).\">\n\t<thead>\n\t\t<tr><th scope=\"col\">Time</th><th scope=\"col\">Height</th></tr>\n\t</thead>\n"
+    formatted = "<table summary=\"Tide tables with columns for time of day and tide height (in meters).\">\n\t<thead>\n\t\t<tr><th scope=\"col\">Time</th><th scope=\"col\">Height</th></tr>\n\t</thead>\n"
     last_date = nil
     to_csv.each_line do |row|
       row = row.chomp.split(',')
